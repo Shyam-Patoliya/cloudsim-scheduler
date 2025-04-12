@@ -19,10 +19,9 @@ jobs:
       with:
         java-version: '21'
         distribution: 'temurin'
-        
+
     - name: Install CloudSim to local Maven repo
       run: mvn install:install-file -Dfile=lib/cloudsim-4.0.jar -DgroupId=org.cloudbus -DartifactId=cloudsim -Dversion=4.0 -Dpackaging=jar
-
 
     - name: Build with Maven
       run: mvn clean install
